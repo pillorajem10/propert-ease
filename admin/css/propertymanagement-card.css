@@ -1,0 +1,47 @@
+@media (max-width: 768px) {
+    body {
+        display: block;
+        position: relative;
+        overflow-x: hidden;
+    }
+    .card1 {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-left: 16%;
+        margin-right: 16%;
+        max-width: 100%;
+    }
+    .card2 {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-left: 16%;
+        margin-right: 16%;
+        max-width: 100%;
+    }
+    .card3 {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-left: 16%;
+        margin-right: 16%;
+        max-width: 100%;
+    }
+    .card3 .btn {
+        display: block;
+        margin-left: -16%;
+        margin-right: -16%;
+        max-width: 100%;
+    }
+    .mb-3 {
+        margin-bottom: 10px;
+    }
+    .btn {
+        display: block;
+        padding: 2px;
+        margin-left: -15%;
+        margin-right: -15%;
+        width: 100px;
+    }
+}

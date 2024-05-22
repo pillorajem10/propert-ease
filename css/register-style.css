@@ -1,0 +1,335 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.content {
+  margin-top: -10%;
+}
+
+.container-register {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease-in-out;
+}
+
+.text-primary {
+  color: #007bff;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+}
+
+.text-muted {
+  color: #6c757d;
+  font-size: 25px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  margin-top: -6%;
+}
+
+.form-control {
+  border: 2px solid #eaeaea;
+  border-radius: 8px;
+  transition: border-color 0.3s, height 0.3s;
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+.input-group-append .btn {
+  border-radius: 0 8px 8px 0;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.input-group-append .btn i {
+  color: #fff;
+}
+
+.form-check-input {
+  margin-top: 0.25rem;
+}
+
+.form-check-label {
+  font-size: 12px;
+  color: #343a40;
+  font-weight: normal;
+  font-family: "Arial", sans-serif;
+  margin-top: 0.3rem;
+}
+
+.text-center a {
+  color: #007bff;
+}
+
+.custom-link {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.custom-link:hover {
+  color: #0056b3;
+}
+
+.register-label {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: font-size 0.3s ease-in-out;
+}
+
+.progress {
+  margin-top: 20%;
+}
+
+.progressbar {
+  margin-bottom: 2rem;
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.progress-step {
+  width: 20%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+}
+
+.progress-step-active {
+  background-color: dodgerblue;
+}
+
+/* Form */
+.form {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step-active {
+  display: block;
+  animation: animate 0.5s;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.3s, border-color 0.3s;
+  font-size: 18px;
+  height: 45px;
+  padding: 10px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/* Button */
+.btns-group {
+  position: relative;
+  margin-top: 5%;
+}
+
+.btns-group .btn {
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #63b8ee, #4682b4);
+  padding: 10px 20px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-top: 0.38rem;
+}
+
+.checkbox-container label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: -0.1rem;
+  margin-top: -0.1rem;
+}
+
+.step {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.step.active {
+  color: #2980b9;
+}
+
+.step:hover {
+  text-shadow: 0 0 10px #3498db;
+}
+
+.step-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pagination1 .step,
+.pagination2 .step {
+  margin: 0 5px;
+}
+
+.form-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 10%;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #000;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Modal animation */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#register-page {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+#register-page.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .content {
+    margin-top: 1rem;
+  }
+  .container-register {
+    padding: 20px;
+    margin-top: -4rem;
+  }
+
+  .text-primary {
+    font-size: 28px;
+  }
+
+  .text-muted {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .form-control {
+    height: 36px;
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    font-size: 18px;
+    height: 45px;
+  }
+}

@@ -1,0 +1,289 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.gcash-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.gcash-column {
+    flex: 1;
+}
+
+.gcash-column.blue {
+    background-color: #297bfa;
+    color: #fff;
+    padding: 20px;
+}
+
+.gcash-column.gray {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.gcash-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gcash-logo img {
+    width: 400px;
+    height: auto;
+}
+
+.gcash-form {
+    display: flex;
+    position: absolute;
+    left: 32%;
+    right: 32%;
+    width: 50%;
+    margin-top: 20%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 32vh;
+    background-color: #f0f0f0;
+    margin-top: 12%;
+}
+
+.payment-form {
+    display: flex;
+    position: absolute;
+    left: 32%;
+    right: 32%;
+    width: 50%;
+    margin-top: 20%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px 0 80px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 32vh;
+    background-color: #f0f0f0;
+    margin-top: 12%;
+}
+
+.description {
+    display: block;
+    position: relative;
+    margin-left: -30%;
+    margin-right: -30%;
+    padding-top: 2%;
+    width: 100%;
+    font-weight: bold;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.payment-title {
+    display: block;
+    position: relative;
+    margin-left: -2%;
+    margin-right: -2%;
+    width: 100%;
+    font-weight: bold;
+    font-family: Montserrat, Arial, sans-serif;
+    text-align: center;
+}
+
+.form-content {
+    display: block;
+    position: relative;
+    margin-left: 28%;
+    margin-right: 28%;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.form-group .field {
+    font-weight: normal;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.label-input {
+    margin-left: -20%;
+}
+
+.form-body {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+    height: 38%;
+    margin-left: -3.75%;
+    margin-right: -3.75%;
+    margin-top: 12%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.paymentform-body {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+    height: 38%;
+    margin-left: -3.75%;
+    margin-right: -3.75%;
+    margin-top: -1%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    display: block;
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50%;
+    background-color: #297bfa;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.footer-container {
+    display: block;
+    position: absolute;
+    background-color: #f0f0f0;
+    height: 30vh;
+    margin-bottom: 10%;
+}
+
+.headerline {
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-left: -20%;
+    margin-right: -20%;
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .gcash-form {
+        left: 5%;
+        right: 5%;
+        width: 60%;
+        height: 34%;
+        margin-top: 30%;
+    }
+
+    .payment-form {
+        left: 5%;
+        right: 5%;
+        width: 60%;
+        height: 40%;
+        margin-top: 30%;
+    }
+
+    .gcash-logo {
+        display: flex;
+        flex-direction: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .gcash-logo img {
+        width: 200px;
+        height: auto;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 15px;
+    }
+
+    .form-group .field {
+        font-weight: normal;
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 15px;
+    }
+
+    .form-content {
+        margin-left: 5.5%;
+        margin-right: 5.5%;
+    }
+
+    .form-body {
+        left: 3.90%;
+        right: 3.90%;
+        margin-top: 20%;
+        height: 40%;
+    }
+
+    .paymentform-body {
+        left: 3.90%;
+        right: 3.90%;
+        margin-top: 1%;
+        height: 40%;
+    }
+
+    .label-input {
+        margin: auto;
+    }
+
+    .description {
+        display: block;
+        position: relative;
+        margin-left: -8%;
+        margin-right: -8%;
+        width: 100%;
+        font-weight: bold;
+        font-family: Montserrat, Arial, sans-serif;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .btn-primary {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .headerline {
+        text-align: center;
+        display: block;
+        position: relative;
+        margin-left: -6%;
+        margin-right: -6%;
+        width: 95%;
+    }
+    .gcash-form, .payment-form {
+        margin-top: 22%;
+    }
+}

@@ -1,0 +1,92 @@
+@media (max-width: 768px) {
+  .body-wrapper {
+    overflow-x: hidden;
+  }
+  .btn-wrapper {
+    width: 150%;
+  }
+  .btn-effect-1 {
+    display: block;
+    position: relative;
+    left: -15.5%;
+    right: -15.5%;
+    width: 25%;
+  }
+  .btn-effect-2 {
+    display: block;
+    position: relative;
+    left: 20%;
+    right: 20%;
+    width: 25%;
+  }
+  .slide-item-info-inner {
+    display: block;
+    position: relative;
+    left: -22%;
+    top: 6ch;
+    width: 100%;
+  }
+  .ltn__slide-item-inner .container {
+    height: 90px;
+    margin-top: -16%;
+  }
+  .slide-item-img {
+    display: flex;
+    position: absolute;
+    margin-top: -115%;
+  }
+  .car-dealer-form-inner {
+    position: relative;
+    top: 40%;
+    left: 49.8%;
+    transform: translate(-50%, -50%);
+  }
+  .team-composition, .container-fluid {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .slide-item-info {
+    display: block;
+    position: relative;
+    top: 2.4rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 428px) {
+  .slide-item-info {
+    display: block;
+    position: relative;
+    top: 3.5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 412px) {
+  .slide-item-info {
+    display: block;
+    position: relative;
+    top: 5.5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .slide-item-info {
+    display: block;
+    position: relative;
+    top: 5.5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .slide-item-info {
+    display: block;
+    position: relative;
+    top: 5.5rem;
+    width: 100%;
+  }
+}

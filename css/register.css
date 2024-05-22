@@ -1,0 +1,581 @@
+body {
+  font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Global Stylings */
+* {
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background-color: #f8f9fa;
+  color: #495057;
+  transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #80bdff;
+  background-color: #fff;
+  color: #495057;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0 4rem;
+  position: relative;
+}
+
+.progress {
+  height: 8px;
+  flex-grow: 1;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.progress-bar::after {
+  margin-right: -5rem;
+}
+
+.progress-step {
+  width: 3rem;
+  height: 3rem;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  position: relative;
+  margin-right: 1.5rem; /* Add space between progress steps */
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  margin: 1px auto;
+  margin-right: -0.2rem;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+/* Form */
+.form {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step-active {
+  display: block;
+  animation: animate 0.5s;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.card-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #63b8ee, #4682b4);
+  padding: 10px 20px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 0.5rem;
+}
+
+.step {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.step.active {
+  color: #2980b9;
+}
+
+.step:hover {
+  text-shadow: 0 0 10px #3498db;
+}
+
+.step-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pagination1 .step,
+.pagination2 .step {
+  margin: 0 5px;
+}
+
+.form-title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.container {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 100%;
+  background: #0c2d60;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 80%;
+  height: 40%;
+  margin-bottom: 20px;
+}
+
+.card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 110%;
+  max-width: 600px;
+  height: 100vh;
+  margin-bottom: 5%;
+  overflow-x: hidden;
+}
+
+.card-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 50px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #63b8ee, #4682b4);
+  padding: 10px 20px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem; /* Add margin bottom to create space between labels and inputs */
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  padding: 0.75rem; /* Baguhin ang padding sa pangkaraniwang laki */
+  border-radius: 0.25rem;
+  width: calc(140% - 1.5rem); /* Alisin ang padding mula sa lapad */
+  margin-bottom: 1rem; /* Itagilid ang pagitan ng mga form controls */
+}
+
+.form-group {
+  display: flex; /* I-set ang display sa flex */
+  flex-direction: column; /* Baguhin ang direksyon ng flex sa column */
+  align-items: left; /* I-center ang mga item horizontally */
+  margin-left: -17.5%;
+  margin-right: -17.5%;
+  margin-top: 8%; /* I-adjust ang margin top kung kailangan */
+  width: 100%;
+}
+
+.form-group:nth-child(2),
+.form-group:nth-child(3),
+.form-group:nth-child(4),
+.form-group:nth-child(5),
+.form-group:nth-child(6),
+.form-group:nth-child(7),
+.form-group:nth-child(8),
+.form-group:nth-child(9),
+.form-group:nth-child(10) {
+  margin-top: 10%;
+}
+
+.form-group:nth-child(10) {
+  margin-top: 8%;
+}
+
+.preview-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+.password-container {
+  position: relative;
+}
+
+.confirm-password-container {
+  position: relative;
+}
+
+.toggle-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  right: -30%;
+  transform: translateY(-50%);
+}
+
+.toggle-confirm-password {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  right: -30%;
+  transform: translateY(-50%);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 10px;
+}
+
+.login {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.login a {
+  color: #fff;
+}
+
+.image-container {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #000;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  animation-name: modalopen;
+  animation-duration: 0.4s;
+}
+
+/* Modal animation */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Sa pagitan ng 768px at mas mababa */
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  /* Baguhin ang layout ng register container */
+  .register-container {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+    background: #0c2d60;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* Baguhin ang layout ng card */
+  .card {
+    width: 100%;
+    height: 200%;
+    display: flex;
+    padding: 20px;
+    margin-top: -10%;
+    overflow-x: hidden;
+  }
+
+  /* Baguhin ang layout ng logo */
+  .logo {
+    margin-top: 10px;
+    max-width: 100%;
+    height: 22%;
+  }
+
+  /* Baguhin ang layout ng primary button */
+  .btn-primary {
+    margin-top: 15px;
+  }
+
+  /* Adjustments for input text, box, and fields */
+  .form-control {
+    padding: 0.5rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+    text-align: left;
+    margin-left: 5%;
+  }
+
+  /* Baguhin ang layout ng form group */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: -2.5%;
+    margin-right: -2.5%;
+    margin-top: 8%;
+    width: 80%;
+  }
+
+  /* Baguhin ang margin top ng ilang form groups */
+  .form-group:nth-child(2),
+  .form-group:nth-child(3),
+  .form-group:nth-child(4),
+  .form-group:nth-child(5),
+  .form-group:nth-child(6),
+  .form-group:nth-child(7),
+  .form-group:nth-child(8),
+  .form-group:nth-child(9),
+  .form-group:nth-child(10) {
+    margin-top: 10%;
+  }
+
+  /* Baguhin ang margin top ng ikapitong form group */
+  .form-group:nth-child(10) {
+    margin-top: 8%;
+  }
+}
